@@ -1,0 +1,157 @@
+{{> header}}
+{{> page-headline}}
+
+<div class="row">
+    <div id="main" class="main profile-page">
+        <div class="main__side-bar">
+            <div class="user-widget--small">
+                <div class="user-widget flex-disp">
+                    <div class="user-widget__img">
+                        <img src="{{imgUrl}}" alt="User Image" class="user-widget__topimg-img">
+                    </div>
+                    <div class="user-widget__name">
+                        <a href="#">{{user}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="primary-list side-menu">
+                <li class="side-menu__link"><a href="#" id="profile">Edit Profile</a></li>
+                <li class="side-menu__link"><a href="#" id="history">History</a></li>
+                <li class="side-menu__link"><a href="#" id="stats">Stats</a></li>
+            </ul>
+        </div>
+        <div class="main__main-content">
+            <div id="profilePage" class="scroll-container">
+                <div class="stats tab custom-scroll">
+                    <div class="stats__wrapper">
+                        <div class="stats__header">
+                            <h3>User Info</h3>
+                        </div>
+                        <ul class="stats__list">
+                            <li class="stats__list-item">
+                                <div class="stats__list-heading">Username :</div><span class="stats__meat">{{user}}</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <div class="stats__list-heading">E-mail :</div><span
+                                    class="stats__meat">{{email}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stats__wrapper">
+                        <div class="stats__header">
+                            <h3>Stats</h3>
+                        </div>
+                        <ul class="stats__list">
+                            <li class="stats__list-item">
+                                <div class="stats__list-heading">Attempts :</div><span class="stats__meat">{{basicAttempts}}</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <div class="stats__list-heading">Correct Answers :</div><span
+                                    class="stats__meat">{{basicSuccesses}}</span>
+                            </li>
+                             <li class="stats__list-item">
+                                <div class="stats__list-heading">Success rate :</div><span
+                                    class="stats__meat">{{basicPercentage}}%</span>
+                            </li>
+                             <li class="stats__list-item">
+                                <div class="stats__list-heading">XP :</div><span
+                                    class="stats__meat">{{xp}}</span>
+                            </li>
+                             <li class="stats__list-item">
+                                <div class="stats__list-heading">Most Answers in a row :</div><span
+                                    class="stats__meat">{{bestCombo}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="custom-scroll profile tab active">
+                    <form action="patch" id="update-form" class="form-edit form">
+                        <fieldset>
+                            <legend>Update Account info</legend>
+                            <div class="form-edit__group">
+                                <label for="username">Username: </label>
+                                <input type="text" name="username" id="username" placeholder="New username">
+                            </div>
+                            <div class="form-edit__group">
+                                <label for="email">Email: </label>
+                                <input type="email" name="email" id="email" placeholder="New email">
+                            </div>
+                            <div class="form-edit__group">
+                                <button type="submit"
+                                    class="btn btn__main btn__main--black form-edit__btn">Submit</button>
+                            </div>
+                        </fieldset>
+
+
+                    </form>
+
+                    <form action='/api/images' method="post" enctype="multipart/form-data" class="form-edit">
+                        <fieldset>
+                            <legend>Change Your Picture</legend>
+                            <div class="form-edit__group form-edit__group--pic">
+                                <input type='file' name='image' />
+                                <button type="submit" value="Submit"
+                                    class="btn btn__main btn__main--black form-edit__btn">Submit</button>
+                            </div>
+                        </fieldset>
+
+
+                    </form>
+
+                    <form action="patch" id="update-password" class="form-edit form">
+                        <fieldset>
+                            <legend>
+                                Update Your Password
+                            </legend>
+                            <div class="form-edit__group"><label for="old-password">Old password: </label>
+                                <input type="password" name="old-password" id="old-password" placeholder="Old password"
+                                    required></div>
+                            <div class="form-edit__group">
+                                <label for="new-password">New password: </label>
+                                <input type="password" name="new-password" id="new-password" placeholder="New password"
+                                    required>
+                            </div>
+                            <div class="form-edit__group">
+                                <button type="submit"
+                                    class="btn btn__main btn__main--black form-edit__btn">Submit</button>
+                            </div>
+                        </fieldset>
+
+
+                    </form>
+                    <button id="delete-account" class="btn btn__main btn__main--black center show">Delete
+                        Account</button>
+                </div>
+                <div class="history custom-scroll tab">
+                    <div class="history__list"></div>
+                </div>
+                <div class="lds-roller loader hidden">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p id="update-response"></p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> overlay}}
+<script src="/js/utils/moment.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="/js/profile.js"></script>
+<script src="/js/utils/accordion.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>

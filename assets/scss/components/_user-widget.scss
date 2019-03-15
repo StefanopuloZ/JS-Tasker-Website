@@ -1,0 +1,85 @@
+.user-widget {
+    transition: all ease 500ms;
+    color: $yellow-main-color;
+    align-items: center;
+    position: relative;
+    text-shadow: 0 0px 1px #fff;
+    padding: .5rem 1.2rem;
+    height: 4.5rem;
+    &__img {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        
+        @include respond(phone){
+            text-align: center;
+            margin-bottom: .54rem;
+        }
+    }
+
+    &__topimg {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        @include respond(phone){
+            text-align: center;
+            margin-bottom: .54rem;
+        }
+    }
+
+    &__topimg-img {
+        position: relative;
+        left: -25%;
+        width: 150%;
+    }
+
+    &__name {
+        line-height: .4;
+        margin: 0 .75rem 0 1.3rem;
+        font-size: 1.6rem;
+    }
+
+    &__icon {
+    }
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+        text-shadow: 0 0 1px $yellow-main-color;
+        transition: all ease 500ms;
+    }
+    &.not-logged-in {
+        color: #fff;
+
+        .user-widget__not-logged--icon {
+            font-size: 2.3rem;
+        }
+        .user-widget__icon {
+            display: none;
+        }
+    }
+}
+
+.userWidget-has-dropdown{
+    position: relative;
+    & .nav__dropdown--item {
+        color: #fff;
+    }
+    & .nav__dropdown {
+        z-index: 100;
+        top: 45px;
+
+        @include respond(phone){
+            left: -75px;
+        }
+    }
+    &:hover .nav__dropdown {
+        display: block;
+        transition: all ease 500ms;
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}

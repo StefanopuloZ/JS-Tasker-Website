@@ -1,0 +1,27 @@
+.card {
+    &.flex-disp {
+        flex-direction: column;
+    }
+    z-index: 9999;
+    position: absolute;
+    width: 32rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //padding: 6rem 3rem;
+    background-color: $bg-black-dark;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, .6);
+    border-radius: 5px;
+
+    &__headline {
+        padding: 1.5rem 3rem;
+        border-bottom: 1px solid $red-main-color;
+        @include background-gradient($yellow-main-color,$red-main-color);
+        text-transform: uppercase;
+    }
+
+    & .small {
+        text-align: center;
+        margin: 1.5rem 0 2.5rem 0;
+    }
+}

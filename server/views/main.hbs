@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="row bg-dark-low">
+            <div class="headline-main flex-disp">
+                <i class="fas fa-play headline-main__icon"></i>
+                <h2 class="headline-main__text">{{title}}</h2>
+                <div class="user-stats">
+                            <ul class="primary-list primary-list__game">
+                                <li>Experience: <span class="primary-color-txt font-size-medium"
+                                        id="player-xp">{{xp}}</span></li>
+                                <li>Highest in a row: <span class="primary-color-txt font-size-medium"
+                                        id="player-best-combo">{{bestCombo}}</span></li>
+                                <li>Total tasks: <span class="primary-color-txt font-size-medium"
+                                        id="player-basic-attempts">{{basicAttempts}}</span></li>
+                                <li>Success percentage: <span id="player-basic-percentage"
+                                        class="secondary-color-txt font-size-medium">{{basicPercentage}}%</span>
+                                </li>
+                            </ul>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="main game-page">
+
+            <div class="main__main-content">
+                <div id="game-area" class="ins-shadow"></div>
+                <div class="timer main__side-bar--timer">
+                    <p id="timeLeft" class="timer__number">30</p>
+                    <p id="sec">sec</p>
+                    <canvas id="progress" width="140" height="140" class="timer__progress"></canvas>
+                </div>
+                <form action="post" id="form-game" class="answer-submit">
+                    <label for="answer" class="answer-submit__question"><span>Console.log</span> output equals to :
+                    </label>
+                    <div class="answer-submit__group">
+                        <input type="text" name="answer" id="answer" class="answer-submit__input"
+                            placeholder="Answer goes here" autocomplete="off">
+                        <input type="submit" value="Submit" class="answer-submit__btn btn btn__main btn__main--red">
+                    </div>
+                </form>
+
+                <div class="overlay overlay--game">
+                    <div class="overlay__pic1"></div>
+                    <div class="overlay__pic2"></div>
+                    <div class="game__buttons">
+                        <button id="start" class="btn btn__main btn__main--red btn__big" autofocus>Start</button>
+                        <button id="exit" class="btn btn__main btn__main--red btn__big">Exit</button>
+                    </div>
+
+                    <div class="overlay__console">
+                        <span id="code" class="overlay__code">Code</span><span id="pointer" class="overlay__pointer">
+                            _</span>
+                    </div>
+
+                    <div class="lds-roller loader hidden">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="game-status hidden txt-center">&nbsp;</div>
+                    <div class="next-game-countdown">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/converter.js"></script>
+    <script src="/js/timer.js"></script>
+    <script src="/js/UI-validation.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+{{> header}}
+
+{{> page-headline}}
+<div class="row">
+    <div id="main" class="main">
+        <div class="card flex-disp">
+            <h3 class="card__headline">{{title}}</h3>
+            <form action="post" id="register-form" class="form-card form">
+                <div class="form-card__group"> 
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" placeholder="Enter username" autofocus required
+                        autocomplete="off"></div>
+
+                <div class="form-card__group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter email" required></div>
+
+                <div class="form-card__group"> 
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Enter password" required></div>
+
+                <button type="submit" id="submit" class="btn form-card__btn btn__main btn__main--red">Submit</button>
+            </form>
+
+            <p class="small">Already a member? <a href="/login" class="sec-color-txt fw-600">Log in</a> instead</p>
+            <div id="form-response" class="hidden form-popup">
+                <div class="lds-roller loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <span class="form-popup__message hidden"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay hidden">
+
+</div>
+
+
+
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="/js/UI-validation.js"></script>
+<script src="/js/register.js"></script>
+<script src="/js/main.js"></script>
+</body>
+
+</html>

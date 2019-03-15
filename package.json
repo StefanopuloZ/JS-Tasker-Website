@@ -1,0 +1,42 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-css": "node-sass --include-path scss assets/scss/main.scss public/css/style.css",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/test",
+    "testmon": "nodemon --exec npm test",
+    "start": "node server/server.js",
+    "startmon": "nodemon server/server.js"
+  },
+  "engines": {
+    "node": "10.14.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.13.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-hbs": "^2.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.12",
+    "multer": "^1.4.1",
+    "multer-storage-cloudinary": "^2.2.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "expect": "^24.1.0",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.11.0"
+  }
+}

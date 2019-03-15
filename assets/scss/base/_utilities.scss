@@ -1,0 +1,77 @@
+.flex-disp {
+    display: flex;
+}
+
+.small {
+    font-size: 1.2rem;
+}
+
+.secondary-color-txt {
+    color: $red-main-color; 
+}
+.primary-color-txt {
+    color: $yellow-main-color;
+}
+.tertiary-color-txt {
+    color: $green-main-color;
+}
+.secondary-color-border {
+    border-color: $red-main-color; 
+}
+.primary-color-border {
+    border-color: $yellow-main-color;
+}
+.tertiary-color-border {
+    border-color: $green-main-color;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+
+.font-size-medium {
+    font-size: 1.7rem;
+}
+.font-size-big {
+    font-size: 2.1rem;
+}
+.font-size-huge {
+    font-size: 6rem;
+}
+.block-disp {
+    display: block;
+}
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.txt-center {
+    text-align: center;
+}
+.center {
+    margin: 0 auto;
+}
+
+.padding-small {
+    padding: 2.2rem;
+}
+
+.active {
+    
+}
+
+.float--left {
+    float: left;
+}
+.float--right {
+    float: right;
+}
+
+.ins-shadow {
+        -moz-box-shadow:    inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow:         inset 0 0 10px #000000;
+}

@@ -1,0 +1,71 @@
+.primary-list {
+    @include clearfix;
+    // /background: red;
+    display: inline-block;
+    &__game {
+        list-style: none;
+
+        &>li {
+            float: left;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none !important;
+            }
+        }
+    }
+
+    padding-left: 2.5rem;
+
+    & li {
+        position: relative;
+        padding: 1rem 0;
+        transition: .3s all;
+
+        &::after {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            left: -27px;
+            top: 17px;
+            background-color: #3D3D3D;
+            display: block;
+            position: absolute;
+            transition: .3s all;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -21px;
+            border-left: 2px solid #3D3D3D;
+            height: 100%;
+            width: 1px;
+        }
+
+        &:first-child::before {
+            //top: 6px;
+        }
+    }
+
+    &.side-menu {
+
+        & li:hover {
+            cursor: pointer;
+            color: $yellow-main-color;
+        }
+
+        & li:hover::after {
+            background-color: $yellow-main-color;
+        }
+    }
+
+}
