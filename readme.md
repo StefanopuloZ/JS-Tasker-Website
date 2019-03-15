@@ -1,3 +1,32 @@
+# JS Parser
+
+Why have limited options when you can have unlimited?
+
+JS Parser is functional web site for solving JavaScript problems. Main difference from other similar sites is that it has near unlimited set of randomly generated taks. What we have done is created custom code parser that is randomizing written code templates each time a request is sent to it. So, we can write one task template and resulting code will never be the same!
+
+### What gets randomized?
+
+- Almost everything that can be without breaking code itself. Variable names, variable positions, line positions, blocks of code positions, array elements, object keys names, object keys positions, if else blocks positions...
+
+- Furhter more, we are randomizing appearance of quotes, both double and single so they may or may not appear in a set line of code. We have also implemented randomization of other operators so they are also randomly generated. Function calls are also randomly generated... 
+
+- Variable declaration randomization. Variables can be assigned random array, object, array, function or string value in each randomization further multiplying varieties, but what is really awesome is that you can call random variable from code above with specific value type in code below! Two string variables in first two lines of code and parser will randomly generate one of those two each time if specified below...
+
+- And more... 
+
+- Full list of randomization options is in our parser section. There you can find every command and how it works. Parser is compiled from two main parts according to where commands to it are written. In comments or inside code itself. What makes things easy is that code can be written outside of parser in your text editor and it will be valid as you type it!
+
+### Site tehnologies
+
+- Back End side has been done using Node.js, Express and MongoDB with Mongoose. 
+- Site is using cookies for keeping user sessions and JSON Web Token for encoding sensitive info.
+- Front End side has been done using HTML, SASS and Canvas.
+
+
+#
+# Parser
+#
+
 **Parser code randomization** project aims to give options to randomize code while keeping base code valid for code editors. Parsing is done in two main "blocks" of randomization. Comments and Inline. 
 
 Comments randomization deals with all randomization commands behind comments in a specific order as not to brake code:
@@ -467,3 +496,12 @@ example:
             console.log($used_ºS);
 
 In this example all variables will randomly be assigned strings. Console log will pick one of them randomly as they have all been classified as string above. 
+
+
+
+#
+#### Created by Stefan Deak and Miljan Rubežić
+
+Development history can be seen in BelgradeCoding test-server repo.
+
+https://github.com/BelgradeCoding/test-server
