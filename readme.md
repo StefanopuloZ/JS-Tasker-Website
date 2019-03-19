@@ -1,5 +1,7 @@
 # JS Parser
 
+### Project online using Heroku **[here](https://stefanopuloz.github.io/Slot-Machine-Minor/)**
+
 Why have limited options when you can have unlimited?
 
 JS Parser is functional web site for solving JavaScript problems. Main difference from other similar sites is that it has near unlimited set of randomly generated taks. What we have done is created custom code parser that is randomizing written code templates each time a request is sent to it. So, we can write one task template and resulting code will never be the same!
