@@ -1,6 +1,6 @@
 # JS Parser
 
-### Project online using Heroku **[here](https://stefanopuloz.github.io/Slot-Machine-Minor/)**
+### Project online using Heroku **[here](https://enigmatic-wildwood-96070.herokuapp.com)**
 
 Why have limited options when you can have unlimited?
 
