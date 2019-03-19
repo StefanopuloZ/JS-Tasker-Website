@@ -20,9 +20,10 @@ JS Parser is functional web site for solving JavaScript problems. Main differenc
 
 ### Site tehnologies
 
-- Back End side has been done using Node.js, Express and MongoDB with Mongoose. 
+- Back End side has been done using Node.js, Express and MongoDB with Mongoose, hbs used as a view engine. 
 - Site is using cookies for keeping user sessions and JSON Web Token for encoding sensitive info.
 - Front End side has been done using HTML, SASS and Canvas.
+- Mocha with Expect library used for unit tests.
 
 
 #
