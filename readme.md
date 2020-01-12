@@ -1,4 +1,4 @@
-# JS Parser
+# JS Tasker
 
 ### Project online using Heroku **[here](https://enigmatic-wildwood-96070.herokuapp.com)**
 
